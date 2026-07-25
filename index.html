@@ -85,6 +85,9 @@ header.scrolled{padding:12px 0;background:rgba(36,17,39,.82);backdrop-filter:blu
 .hero-dots{position:absolute;inset:0;z-index:1;opacity:.5;pointer-events:none}
 .hero-inner{position:relative;z-index:2;max-width:660px}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);padding:8px 18px;border-radius:999px;font-size:.82rem;font-weight:700;margin-bottom:26px;backdrop-filter:blur(6px)}
+.glow-dot{position:relative;width:8px;height:8px;border-radius:50%;background:var(--orange);flex-shrink:0;box-shadow:0 0 6px 1px var(--orange)}
+.glow-dot::before{content:'';position:absolute;inset:-5px;border-radius:50%;background:var(--orange);opacity:.55;animation:glowPulse 1.8s ease-in-out infinite}
+@keyframes glowPulse{0%,100%{transform:scale(.6);opacity:.55}50%{transform:scale(1.6);opacity:0}}
 .hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--orange)}
 .hero h1{font-size:clamp(2rem,4.6vw,3.2rem);margin-bottom:20px}
 .hero h1 .hl{color:var(--orange-l);white-space:nowrap;display:inline-block}
@@ -97,8 +100,6 @@ header.scrolled{padding:12px 0;background:rgba(36,17,39,.82);backdrop-filter:blu
 .hstat{flex:1;padding-inline-end:20px}
 .hstat b{display:block;font-size:clamp(1.3rem,2.2vw,1.7rem);font-weight:900;color:#fff}
 .hstat span{font-size:.78rem;color:rgba(255,255,255,.6);font-weight:600}
-.scroll-cue{position:absolute;bottom:22px;inset-inline-start:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.5);font-size:.72rem}
-.scroll-cue .ln{width:1px;height:30px;background:linear-gradient(180deg,rgba(255,255,255,.6),transparent);animation:scrl 2s ease-in-out infinite}
 @keyframes scrl{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
 /* section shells */
@@ -314,7 +315,7 @@ footer{background:var(--p900);color:rgba(255,255,255,.6);padding:60px 0 26px}
   <div class="wrap">
     <div class="hero-inner">
       <span class="hero-badge reveal"><span class="dot"></span> <span data-ar="Veralex Amazon — Done For You FBA" data-en="Veralex Amazon — Done For You FBA">Veralex Amazon — Done For You FBA</span></span>
-      <span class="hero-badge reveal" style="margin-inline-start:10px" data-ar="+35 عميلًا نشطًا في 7 أسواق عالمية" data-en="35+ active clients across 7 global markets">+35 عميلًا نشطًا في 7 أسواق عالمية</span>
+      <span class="hero-badge reveal" style="margin-inline-start:10px"><span class="glow-dot"></span> <span data-ar="أول شركة في الشرق الأوسط تقدم خدمة Amazon FBA لجميع أسواق العالم" data-en="First company in the Middle East offering Amazon FBA service across all global markets">أول شركة في الشرق الأوسط تقدم خدمة Amazon FBA لجميع أسواق العالم</span></span>
       <h1 class="reveal d1" data-ar='ابنِ مشروعك على <span class="hl">Amazon FBA</span> ودعنا نتولى التفاصيل' data-en='Build your <span class="hl">Amazon FBA</span> business, we handle the rest'>ابنِ مشروعك على <span class="hl">Amazon FBA</span> ودعنا نتولى التفاصيل</h1>
       <p class="hero-lead reveal d2" data-ar="نبني وندير مشروعك بداية من دراسة السوق واختيار المنتج، وحتى التوريد والتصنيع والشحن والإطلاق والإدارة المستمرة، مع بقاء الحساب والمشروع باسمك بالكامل." data-en="We build and manage your project from market research and product selection to sourcing, manufacturing, shipping, launch and ongoing management — with the account and business fully in your name.">نبني وندير مشروعك بداية من دراسة السوق واختيار المنتج، وحتى التوريد والتصنيع والشحن والإطلاق والإدارة المستمرة، مع بقاء الحساب والمشروع باسمك بالكامل.</p>
       <div class="hero-actions reveal d3">
@@ -334,7 +335,6 @@ footer{background:var(--p900);color:rgba(255,255,255,.6);padding:60px 0 26px}
       </div>
     </div>
   </div>
-  <div class="scroll-cue"><span data-ar="مرر للأسفل" data-en="Scroll">مرر للأسفل</span><div class="ln"></div></div>
 </section>
 
 <!-- AUDIENCE -->
