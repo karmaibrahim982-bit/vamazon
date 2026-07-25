@@ -57,8 +57,8 @@ h1,h2,h3,h4{font-weight:900;line-height:1.25}
 header{position:fixed;inset-inline:0;top:0;z-index:900;padding:22px 0;transition:.4s var(--ease)}
 header.scrolled{padding:12px 0;background:rgba(36,17,39,.82);backdrop-filter:blur(16px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:inline-flex;align-items:center;background:rgba(255,255,255,.94);padding:5px 12px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.12)}
-.brand img{height:28px;display:block}
+.brand{display:inline-flex;align-items:center;background:#fff;padding:6px 14px;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.brand img{height:32px;display:block}
 .nav-links{display:flex;gap:4px}
 .nav-links a{font-weight:700;font-size:.92rem;color:rgba(255,255,255,.85);padding:9px 14px;border-radius:999px;transition:.25s}
 .nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.12);color:#fff}
@@ -75,12 +75,6 @@ header.scrolled{padding:12px 0;background:rgba(36,17,39,.82);backdrop-filter:blu
 @media(max-width:900px){.nav-links,.nav-cta{display:none}.burger{display:flex}}
 
 /* HERO */
-.trust-banner{position:relative;z-index:5;background:linear-gradient(90deg,#1a0a1f,#3a1440 50%,#1a0a1f);border-bottom:1px solid rgba(255,164,64,.25);padding:12px 16px;text-align:center;margin-top:76px}
-.trust-banner .wrap{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
-.trust-banner svg{width:18px;height:18px;flex-shrink:0;color:var(--orange)}
-.trust-banner span{font-weight:800;font-size:.92rem;color:#fff;letter-spacing:.2px}
-.trust-banner span span.hl{color:var(--orange-l)}
-@media(max-width:760px){.trust-banner{margin-top:64px;padding:10px 14px}.trust-banner span{font-size:.8rem}}
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;color:#fff;padding-top:100px}
 .hero-bg{position:absolute;inset:0;z-index:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:75% 30%;transform:scale(1.06)}
@@ -300,13 +294,6 @@ footer{background:var(--p900);color:rgba(255,255,255,.6);padding:60px 0 26px}
     </div>
   </div>
 </header>
-
-<div class="trust-banner">
-  <div class="wrap">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4.5 4.4 1 6.1L12 16.5 6.5 19.5l1-6.1L3 8l6-1z"/></svg>
-    <span data-ar='<span class="hl">أول شركة في الشرق الأوسط</span> تقدم خدمة Amazon FBA لجميع أسواق العالم' data-en='<span class="hl">First company in the Middle East</span> offering Amazon FBA service across all global markets'><span class="hl">أول شركة في الشرق الأوسط</span> تقدم خدمة Amazon FBA لجميع أسواق العالم</span>
-  </div>
-</div>
 
 <div class="mobile-panel" id="mobilePanel">
   <button class="mobile-close" id="mobileClose"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
